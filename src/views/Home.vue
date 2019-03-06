@@ -2,6 +2,9 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <mt-button type="default">default</mt-button>
+<mt-button type="primary">primary</mt-button>
+<mt-button type="danger">danger</mt-button>
   </div>
 </template>
 
