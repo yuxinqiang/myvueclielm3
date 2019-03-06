@@ -3,13 +3,13 @@ module.exports = {
     '@vue/app'
   ],
   plugins: [
-    [
-      'import',
-      {
-        'libraryName': 'mint-ui',
-        'libraryDirectory': 'es',
-        'style': true
-      }, 'mint-ui'
-    ]
+    // [
+    //   'import',
+    //   {
+    //     'libraryName': 'mint-ui',
+    //     'libraryDirectory': 'es',
+    //     'style': true
+    //   }, 'mint-ui'
+    // ]
   ]
 }

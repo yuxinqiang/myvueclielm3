@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <mt-header title="标题过长会隐藏后面的内容啊哈哈哈哈">
+    <div class="headCom">
+        <mt-header :title=headerTitle>
             <router-link to="/" slot="left">
                 <mt-button icon="back">返回</mt-button>
             </router-link>
@@ -9,12 +9,18 @@
     </div>
 </template>
 <script>
-import { Header } from 'mint-ui'
-// Vue.component(Header.name, Header)
+
 export default {
-    name:'headerTop'
+    name:'headerTop',
+    data(){
+        return{
+            headerTitle: '标题过长会隐藏后面的内容啊哈哈哈哈'
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
-
+.headCom{
+    width: 100%;
+}
 </style>
