@@ -1,11 +1,11 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <div>
+        这是发现页
+    </div>
 </template>
 <script>
 export default {
-  name:'About'
+    name:'discove'
 }
 </script>
 <style lang="scss" scoped>

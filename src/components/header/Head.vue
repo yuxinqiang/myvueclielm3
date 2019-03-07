@@ -1,10 +1,15 @@
 <template>
     <div class="headCom">
         <mt-header :title=headerTitle>
-            <router-link to="/" slot="left">
-                <mt-button icon="back">返回</mt-button>
-            </router-link>
-            <mt-button icon="more" slot="right"></mt-button>
+            <!-- <router-link to="/" slot="left"> -->
+                <mt-button  :icon=goback slot="left">
+                    <slot name='logo'></slot>
+                    <slot name='goBack'></slot>
+                </mt-button>
+            <!-- </router-link> -->
+            <mt-button :icon=icontype slot="right">
+                <slot name='login'></slot>
+            </mt-button>
         </mt-header>
     </div>
 </template>
@@ -14,13 +19,22 @@ export default {
     name:'headerTop',
     data(){
         return{
-            headerTitle: '标题过长会隐藏后面的内容啊哈哈哈哈'
         }
+    },
+    props:{
+         headerTitle: '',
+        goback: 'back',
+        icontype: 'more'
     }
 }
 </script>
 <style lang="scss" scoped>
 .headCom{
     width: 100%;
+    color:#fff;
+    height: 50px;
+    header {
+        height: 100%;
+    }
 }
 </style>

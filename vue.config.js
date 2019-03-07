@@ -108,7 +108,7 @@ module.exports = {
     // 默认生产环境下是 true，开发环境下是 false
     extract: false,
     // 是否为 CSS 开启 source map。设置为 true 之后可能会影响构建的性能,source map是为了定位样式在css文件中位置
-    sourceMap: false,
+    sourceMap: true,
     // 向 CSS 相关的 loader 传递选项
     loaderOptions: {
       css: {
