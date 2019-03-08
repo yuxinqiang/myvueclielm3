@@ -5,6 +5,9 @@
                 <mt-button  :icon=goback slot="left">
                     <slot name='logo'></slot>
                     <slot name='goBack'></slot>
+                    <!-- <section class="head_goback" v-if="goBack" @click="$router.go(-1)">
+                        返回
+                    </section> -->
                 </mt-button>
             <!-- </router-link> -->
             <mt-button :icon=icontype slot="right">
@@ -22,7 +25,7 @@ export default {
         }
     },
     props:{
-         headerTitle: '',
+        headerTitle: '',
         goback: 'back',
         icontype: 'more'
     }

@@ -4,6 +4,7 @@ import Home from 'views/Home.vue'
 import Index from 'views/index/index.vue'
 import Order from 'views/order/order.vue'
 import Discove from 'views/discove/discove.vue'
+import City from 'views/city/city.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/discove',
       name: 'discove',
       component: Discove
+    },
+    {
+      path: '/city:id',
+      name: 'city',
+      component: City
     },
     {
       path: '/about',
