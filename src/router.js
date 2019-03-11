@@ -33,7 +33,7 @@ export default new Router({
       component: Discove
     },
     {
-      path: '/city:id',
+      path: '/city/:id',
       name: 'city',
       component: City
     },

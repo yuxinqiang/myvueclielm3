@@ -1,10 +1,11 @@
 <template>
     <div class="headCom">
-        <mt-header :title=headerTitle>
+        <mt-header :title=headerTitle class="header_title">
             <!-- <router-link to="/" slot="left"> -->
                 <mt-button  :icon=goback slot="left">
                     <slot name='logo'></slot>
                     <slot name='goBack'></slot>
+                    <slot name="changecity"></slot>
                     <!-- <section class="head_goback" v-if="goBack" @click="$router.go(-1)">
                         返回
                     </section> -->
@@ -38,6 +39,8 @@ export default {
     height: 50px;
     header {
         height: 100%;
+        padding: 1rem;
+        color: #fff;
     }
 }
 </style>
