@@ -10,7 +10,7 @@
           <span>当前定位城市：</span>
           <span>定位不准时，请在城市列表中选择</span>
       </div>
-      <router-link :to="'/' + guessCityid" class="guess_city">
+      <router-link :to="'/city/' + guessCityid" class="guess_city">
           <span>{{guessCity}}</span>
       </router-link>  
     </nav>

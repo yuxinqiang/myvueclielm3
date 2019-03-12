@@ -26,10 +26,14 @@ export default {
         }
     },
     props:{
-        headerTitle: '',
+        headerTitle: String,
         goback: 'back',
         icontype: 'more'
+    },
+    mounted(){
+        this.headerTitle
     }
+
 }
 </script>
 <style lang="scss" scoped>
