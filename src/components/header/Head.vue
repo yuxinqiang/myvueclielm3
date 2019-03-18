@@ -1,17 +1,15 @@
 <template>
     <div class="headCom">
-        <mt-header :title=headerTitle class="header_title">
-            <!-- <router-link to="/" slot="left"> -->
-                <mt-button  :icon=goback slot="left">
-                    <slot name='logo'></slot>
-                    <slot name='goBack'></slot>
-                    <slot name="changecity"></slot>
-                    <!-- <section class="head_goback" v-if="goBack" @click="$router.go(-1)">
-                        返回
-                    </section> -->
-                </mt-button>
-            <!-- </router-link> -->
-            <mt-button :icon=icontype slot="right">
+        <mt-header class="header_title">
+            <mt-button  icon="back" slot="left">
+                <slot name='logo'></slot>
+                <slot name='goBack'></slot>
+                <slot name="changecity"></slot>
+                <section class="head_goback" v-if="goBack" @click="$router.go(-1)">
+                    返回
+                </section>
+            </mt-button>
+            <mt-button icon="more" slot="right">
                 <slot name='login'></slot>
             </mt-button>
         </mt-header>
@@ -23,15 +21,15 @@ export default {
     name:'headerTop',
     data(){
         return{
+            goBack: false,
         }
     },
     props:{
-        headerTitle: String,
-        goback: 'back',
-        icontype: 'more'
+        headerTitle:'',
     },
     mounted(){
         this.headerTitle
+        console.log(this.headerTitle)
     }
 
 }

@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from 'views/Home.vue'
-import Index from 'views/index/index.vue'
-import Order from 'views/order/order.vue'
-import Discove from 'views/discove/discove.vue'
-import City from 'views/city/city.vue'
+
+const Home = () => import(/* webpackChunkName: "home" */ './views/Home.vue')
+const Index = () => import(/* webpackChunkName: "list" */ './views/index/index.vue')
+const Order = () => import(/* webpackChunkName: "order" */ './views/order/order.vue')
+const Discove = () => import(/* webpackChunkName: "discove" */ './views/discove/discove.vue')
+const City = () => import(/* webpackChunkName: "city" */ './views/city/city.vue')
 
 Vue.use(Router)
 
@@ -43,6 +44,7 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
+      // 优化路由加载方式
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     }
 
